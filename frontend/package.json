@@ -1,19 +1,22 @@
 {
   "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "...",
-    "react-dom": "...",
-    "axios": "...",
-    "react-apexcharts": "...",
-    "apexcharts": "..."
+    "apexcharts": "^5.3.5",
+    "axios": "^1.11.0",
+    "react": "^19.1.1",
+    "react-apexcharts": "^1.8.0",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "vite": "...",
-    "@vitejs/plugin-react": "..."
+    "@vitejs/plugin-react": "^5.0.0",
+    "vite": "^7.1.0"
   }
 }

@@ -7,7 +7,7 @@ import MarketIndices from "../Components/MarketIndices";
 import QuickStats from "../Components/QuickStats";
 import PriceChart from "../Components/PriceChart";
 
-import { getStock, getChart } from "../services/api";
+import { getStock, getChart } from "../Services/api";
 
 function Dashboard() {
   const [stock, setStock] = useState(null);

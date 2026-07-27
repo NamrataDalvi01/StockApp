@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import Layout from "../components/Layout";
-import SearchBar from "../components/SearchBar";
-import StockCard from "../components/StockCard";
-import MarketIndices from "../components/MarketIndices";
-import QuickStats from "../components/QuickStats";
-import PriceChart from "../components/PriceChart";
+import Layout from "../Components/Layout";
+import SearchBar from "../Components/SearchBar";
+import StockCard from "../Components/StockCard";
+import MarketIndices from "../Components/MarketIndices";
+import QuickStats from "../Components/QuickStats";
+import PriceChart from "../Components/PriceChart";
 
 import { getStock, getChart } from "../services/api";
 

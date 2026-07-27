@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "...",
+    "react-dom": "...",
+    "axios": "...",
+    "react-apexcharts": "...",
+    "apexcharts": "..."
+  },
+  "devDependencies": {
+    "vite": "...",
+    "@vitejs/plugin-react": "..."
+  }
+}

@@ -48,7 +48,7 @@ function Dashboard() {
 
       <QuickStats />
 
-      <div className="mt-8">
+      <div className="mt-6 md:mt-8">
         <SearchBar onSearch={searchStock} />
       </div>
 

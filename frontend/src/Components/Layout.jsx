@@ -3,15 +3,19 @@ import Navbar from "./Navbar";
 
 function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-slate-950 text-white flex">
+    <div className="min-h-screen bg-slate-950 text-white">
 
-      <Sidebar />
+      {/* Desktop */}
+      <div className="hidden lg:block fixed left-0 top-0 h-screen w-72">
+        <Sidebar />
+      </div>
 
-      <div className="flex-1 ml-72">
+      {/* Main Content */}
+      <div className="lg:ml-72">
 
         <Navbar />
 
-        <main className="p-8">
+        <main className="p-4 md:p-6 lg:p-8">
           {children}
         </main>
 

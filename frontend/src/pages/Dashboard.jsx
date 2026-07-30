@@ -1,63 +1,59 @@
-import { useState } from "react";
+import { TrendingUp } from "lucide-react";
 
-import Layout from "../Components/Layout";
-import SearchBar from "../Components/SearchBar";
-import StockCard from "../Components/StockCard";
-import MarketIndices from "../Components/MarketIndices";
-import QuickStats from "../Components/QuickStats";
-import PriceChart from "../Components/PriceChart";
+...
 
-import { getStock, getChart } from "../Services/api";
+return (
+  <Layout>
 
-function Dashboard() {
-  const [stock, setStock] = useState(null);
-  const [chartData, setChartData] = useState([]);
+    {/* Hero Section */}
+    <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 rounded-3xl p-8 shadow-2xl">
 
-  const searchStock = async (symbol) => {
-  try {
-    console.log("Searching:", symbol);
+      <div className="flex flex-col md:flex-row justify-between items-center">
 
-    const stockResult = await getStock(symbol);
-    console.log("Stock:", stockResult);
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold flex items-center gap-3">
+            <TrendingUp size={40} />
+            StockPro
+          </h1>
 
-    setStock(stockResult);
+          <p className="text-blue-100 mt-4 text-lg">
+            Track live Indian stock prices, market indices and charts in one place.
+          </p>
+        </div>
 
-    const chartResult = await getChart(symbol);
-    console.log("Chart:", chartResult);
+        <div className="mt-6 md:mt-0">
 
-    setChartData(chartResult);
+          <div className="bg-white/20 backdrop-blur-lg px-6 py-4 rounded-2xl">
 
-  } 
-  
-  catch (error) {
-  console.error("FULL ERROR:", error);
+            <h2 className="text-3xl font-bold">NSE</h2>
 
-  if (error.response) {
-    console.log("Status:", error.response.status);
-    console.log("Data:", error.response.data);
-  }
+            <p className="text-blue-100">
+              Real Time Dashboard
+            </p>
 
-  alert(error.message);
-}
-};
+          </div>
 
-  return (
-    <Layout>
+        </div>
 
-      <MarketIndices />
-
-      <QuickStats />
-
-      <div className="mt-6 md:mt-8">
-        <SearchBar onSearch={searchStock} />
       </div>
 
-      <StockCard stock={stock} />
+    </div>
 
-      <PriceChart data={chartData} />
+    <div className="mt-8">
+      <MarketIndices />
+    </div>
 
-    </Layout>
-  );
-}
+    <div className="mt-8">
+      <QuickStats />
+    </div>
 
-export default Dashboard;
+    <div className="mt-8">
+      <SearchBar onSearch={searchStock} />
+    </div>
+
+    <StockCard stock={stock} />
+
+    <PriceChart data={chartData} />
+
+  </Layout>
+);

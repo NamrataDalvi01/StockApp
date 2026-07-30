@@ -34,28 +34,22 @@ function Sidebar() {
 
       </div>
 
-      <div className="px-4 mt-10">
+      <div className="hidden lg:block fixed left-0 top-0 h-screen w-72">
 
         {menu.map((item) => (
 
           <div
-            key={item.name}
-            className="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-800 transition cursor-pointer mb-3"
-          >
+  key={item.name}
+  className="group flex items-center gap-4 p-4 rounded-xl hover:bg-blue-600 transition-all duration-300 cursor-pointer mb-3"
+>
+  <div className="text-xl group-hover:scale-125 transition">
+    {item.icon}
+  </div>
 
-            <div className="text-blue-400">
-
-              {item.icon}
-
-            </div>
-
-            <span>
-
-              {item.name}
-
-            </span>
-
-          </div>
+  <span className="font-medium">
+    {item.name}
+  </span>
+</div>
 
         ))}
 
@@ -64,5 +58,4 @@ function Sidebar() {
     </aside>
   );
 }
-
 export default Sidebar;
